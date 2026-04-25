@@ -6,8 +6,8 @@
 const SURVEY_CONFIG = {
   SALT:           '3d7fa8b2e4c961f05a3d7b8e2c9f4a1d',
   SECRET:         'Xm9Kp4nL7qR2wT5s',
-  ENDPOINT:       'https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec',
-  COMPLETION_URL: 'https://app.prolific.com/submissions/complete?cc=XXXXXXXX',
+  ENDPOINT:       'https://script.google.com/macros/s/AKfycbyG9xEDSCAT7vNmAMDFJyE8LYbpP93xhpKvaYiS-ITzuNUu4Cd734b3vxJ2zpVaBzXS/exec',
+  COMPLETION_URL: 'https://app.prolific.com/submissions/complete?cc=D6LFYZJ0',
   STUDY_ID:       'MAS-MISINFO-2026-CONF'
 };
 
