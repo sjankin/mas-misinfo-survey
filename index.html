@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Academic Survey — University of Birmingham</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     PROGRESS BAR
+     ============================================================ -->
+<div id="progress-container">
+  <div id="progress-track">
+    <div id="progress-bar"></div>
+  </div>
+  <span id="progress-label">0%</span>
+</div>
+
+<!-- ============================================================
+     SURVEY CONTAINER
+     ============================================================ -->
+<main id="survey-container">
+
+  <!-- ========================================================
+       SECTION 0: LOADING
+       ======================================================== -->
+  <div class="section active" id="section-0">
+    <div class="spinner"></div>
+    <p>Loading survey, please wait&hellip;</p>
+  </div>
+
+  <!-- ========================================================
+       SECTION 1: CONSENT
+       ======================================================== -->
+  <div class="section" id="section-1">
+    <p class="section-meta">Participant information &amp; consent</p>
+    <h1>Participant Information and Consent</h1>
+
+    <div class="info-box">
+      <strong>Study title:</strong> How people evaluate statements and information online<br>
+      <strong>Investigators:</strong> Yen-Chieh Liao, Linette Lim, Slava Jankin<br>
+      <strong>Institution:</strong> School of Government, University of Birmingham<br>
+      <strong>Ethics reference:</strong> ERN_5773-Mar2026
+    </div>
+
+    <div class="consent-text">
+      <p>We are researchers at the University of Birmingham studying how people evaluate statements and claims they encounter online. This survey takes approximately 10&ndash;12 minutes.</p>
+
+      <p><strong>What you will do:</strong> You will read three short statements and answer questions about each one. You will rate how accurate each statement seems and how likely you would be to share it. You will also answer some background questions.</p>
+
+      <p><strong>Some statements may not be accurate.</strong> We will give you the correct information for all three statements at the end of the survey, before you receive your completion code.</p>
+
+      <p><strong>Your participation is voluntary.</strong> You can stop at any time by closing your browser. If you wish to withdraw your submitted data, contact Yen-Chieh Liao (y.liao.1@bham.ac.uk) with your Prolific participant ID within <strong>14 days</strong> of completing the survey.</p>
+
+      <p><strong>Your data:</strong> Your survey responses will be stored securely on University of Birmingham infrastructure. Your Prolific ID will be permanently deleted within 14 days of data collection closing. Anonymised responses will also be used in a computational modelling component of this research, in which an AI agent based on your anonymised profile will be used to simulate responses. No personally identifiable information is used in this process. Full details are available in the Participant Information Sheet (ERN_5773-Mar2026), available from y.liao.1@bham.ac.uk.</p>
+
+      <p><strong>Ethics concerns:</strong> researchethics@bham.ac.uk</p>
+    </div>
+
+    <div class="q-block">
+      <span class="q-label">Please confirm your consent to participate:</span>
+      <div class="radio-group" data-name="consent" data-required="true">
+        <label>
+          <input type="radio" name="consent" value="agree" data-key="consent">
+          I have read the above information. I understand that participation is voluntary, that I may withdraw my submitted data within 14 days of completion by contacting the lead researcher, and that my data will be fully anonymised within 14 days of data collection closing. I agree to take part.
+        </label>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(1)">Begin survey &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 2: DEMOGRAPHICS (Q01–Q05)
+       ======================================================== -->
+  <div class="section" id="section-2">
+    <p class="section-meta">Background questions</p>
+    <h2>About You</h2>
+
+    <!-- Q01 Age -->
+    <div class="q-block">
+      <span class="q-label">Q1. How old are you?</span>
+      <div class="radio-group" data-name="q01_age" data-required="true">
+        <label><input type="radio" name="q01_age" value="18-24"     data-key="q01_age"> 18&ndash;24</label>
+        <label><input type="radio" name="q01_age" value="25-34"     data-key="q01_age"> 25&ndash;34</label>
+        <label><input type="radio" name="q01_age" value="35-44"     data-key="q01_age"> 35&ndash;44</label>
+        <label><input type="radio" name="q01_age" value="45-54"     data-key="q01_age"> 45&ndash;54</label>
+        <label><input type="radio" name="q01_age" value="55-64"     data-key="q01_age"> 55&ndash;64</label>
+        <label><input type="radio" name="q01_age" value="65+"       data-key="q01_age"> 65 or older</label>
+      </div>
+    </div>
+
+    <!-- Q02 Gender -->
+    <div class="q-block">
+      <span class="q-label">Q2. What is your gender?</span>
+      <div class="radio-group" data-name="q02_gender" data-required="true">
+        <label><input type="radio" name="q02_gender" value="man"       data-key="q02_gender"> Man</label>
+        <label><input type="radio" name="q02_gender" value="woman"     data-key="q02_gender"> Woman</label>
+        <label><input type="radio" name="q02_gender" value="nonbinary" data-key="q02_gender"> Non-binary</label>
+        <label><input type="radio" name="q02_gender" value="selfdes"   data-key="q02_gender"> Prefer to self-describe</label>
+        <label><input type="radio" name="q02_gender" value="pnts"      data-key="q02_gender"> Prefer not to say</label>
+      </div>
+    </div>
+
+    <!-- Q03 Education -->
+    <div class="q-block">
+      <span class="q-label">Q3. What is the highest level of education you have completed?</span>
+      <div class="radio-group" data-name="q03_education" data-required="true">
+        <label><input type="radio" name="q03_education" value="secondary"   data-key="q03_education"> Secondary school (GCSEs or equivalent) or below</label>
+        <label><input type="radio" name="q03_education" value="alevel"      data-key="q03_education"> A-levels, Scottish Highers, or equivalent</label>
+        <label><input type="radio" name="q03_education" value="vocational"  data-key="q03_education"> Vocational or technical qualification</label>
+        <label><input type="radio" name="q03_education" value="undergrad"   data-key="q03_education"> Undergraduate degree</label>
+        <label><input type="radio" name="q03_education" value="postgrad"    data-key="q03_education"> Postgraduate degree</label>
+        <label><input type="radio" name="q03_education" value="pnts"        data-key="q03_education"> Prefer not to say</label>
+      </div>
+    </div>
+
+    <!-- Q04 Region -->
+    <div class="q-block">
+      <label class="q-label" for="q04_region">Q4. Which region of the UK do you currently live in?</label>
+      <select id="q04_region" name="q04_region" data-key="q04_region" required>
+        <option value="">-- Please select --</option>
+        <option value="north_east">North East England</option>
+        <option value="north_west">North West England</option>
+        <option value="yorkshire">Yorkshire and the Humber</option>
+        <option value="east_midlands">East Midlands</option>
+        <option value="west_midlands">West Midlands</option>
+        <option value="east_england">East of England</option>
+        <option value="london">London</option>
+        <option value="south_east">South East England</option>
+        <option value="south_west">South West England</option>
+        <option value="wales">Wales</option>
+        <option value="scotland">Scotland</option>
+        <option value="northern_ireland">Northern Ireland</option>
+      </select>
+    </div>
+
+    <!-- Q05 Household income -->
+    <div class="q-block">
+      <span class="q-label">Q5. What is your approximate annual household income before tax?</span>
+      <div class="radio-group" data-name="q05_income" data-required="false">
+        <label><input type="radio" name="q05_income" value="under15k"  data-key="q05_income"> Under &pound;15,000</label>
+        <label><input type="radio" name="q05_income" value="15k_25k"   data-key="q05_income"> &pound;15,000&ndash;&pound;24,999</label>
+        <label><input type="radio" name="q05_income" value="25k_35k"   data-key="q05_income"> &pound;25,000&ndash;&pound;34,999</label>
+        <label><input type="radio" name="q05_income" value="35k_50k"   data-key="q05_income"> &pound;35,000&ndash;&pound;49,999</label>
+        <label><input type="radio" name="q05_income" value="50k_75k"   data-key="q05_income"> &pound;50,000&ndash;&pound;74,999</label>
+        <label><input type="radio" name="q05_income" value="75k_plus"  data-key="q05_income"> &pound;75,000 or more</label>
+        <label><input type="radio" name="q05_income" value="pnts"      data-key="q05_income"> Prefer not to say</label>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(2)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 3: POLITICS (Q06–Q08)
+       ======================================================== -->
+  <div class="section" id="section-3">
+    <p class="section-meta">Political views</p>
+    <h2>Your Political Views</h2>
+
+    <!-- Q06 Left-Right self-placement (0-10) -->
+    <div class="q-block lr-scale">
+      <span class="q-label">Q6. On a scale from 0 to 10, where would you place yourself politically?</span>
+      <div class="likert-row">
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="0"  data-key="q06_lr"><span><span class="lk-num">0</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="1"  data-key="q06_lr"><span><span class="lk-num">1</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="2"  data-key="q06_lr"><span><span class="lk-num">2</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="3"  data-key="q06_lr"><span><span class="lk-num">3</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="4"  data-key="q06_lr"><span><span class="lk-num">4</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="5"  data-key="q06_lr"><span><span class="lk-num">5</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="6"  data-key="q06_lr"><span><span class="lk-num">6</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="7"  data-key="q06_lr"><span><span class="lk-num">7</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="8"  data-key="q06_lr"><span><span class="lk-num">8</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="9"  data-key="q06_lr"><span><span class="lk-num">9</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q06_lr" value="10" data-key="q06_lr"><span><span class="lk-num">10</span></span></label>
+      </div>
+      <div class="scale-endpoints">
+        <span>0 &mdash; Very left-wing</span>
+        <span>10 &mdash; Very right-wing</span>
+      </div>
+      <div class="radio-group" data-name="q06_lr" data-required="true" style="display:none;"></div>
+    </div>
+
+    <!-- Q07 Party identification -->
+    <div class="q-block">
+      <span class="q-label">Q7. Which political party do you feel closest to, if any?</span>
+      <div class="radio-group" data-name="q07_party" data-required="false">
+        <label><input type="radio" name="q07_party" value="conservative" data-key="q07_party"> Conservative</label>
+        <label><input type="radio" name="q07_party" value="labour"       data-key="q07_party"> Labour</label>
+        <label><input type="radio" name="q07_party" value="libdem"       data-key="q07_party"> Liberal Democrats</label>
+        <label><input type="radio" name="q07_party" value="reform"       data-key="q07_party"> Reform UK</label>
+        <label><input type="radio" name="q07_party" value="green"        data-key="q07_party"> Green Party</label>
+        <label><input type="radio" name="q07_party" value="snp"          data-key="q07_party"> SNP</label>
+        <label><input type="radio" name="q07_party" value="plaid"        data-key="q07_party"> Plaid Cymru</label>
+        <label><input type="radio" name="q07_party" value="other"        data-key="q07_party"> Other</label>
+        <label><input type="radio" name="q07_party" value="none"         data-key="q07_party"> I do not feel close to any party</label>
+      </div>
+    </div>
+
+    <!-- Q08 Political interest -->
+    <div class="q-block">
+      <span class="q-label">Q8. How interested are you in politics generally?</span>
+      <div class="radio-group" data-name="q08_polint" data-required="true">
+        <label><input type="radio" name="q08_polint" value="not_at_all" data-key="q08_polint"> Not at all interested</label>
+        <label><input type="radio" name="q08_polint" value="not_very"   data-key="q08_polint"> Not very interested</label>
+        <label><input type="radio" name="q08_polint" value="fairly"     data-key="q08_polint"> Fairly interested</label>
+        <label><input type="radio" name="q08_polint" value="very"       data-key="q08_polint"> Very interested</label>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(3)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 4: MEDIA (Q09–Q10)
+       ======================================================== -->
+  <div class="section" id="section-4">
+    <p class="section-meta">News and media use</p>
+    <h2>News and Media</h2>
+
+    <!-- Q09 News frequency -->
+    <div class="q-block">
+      <span class="q-label">Q9. How often do you follow news about politics and current affairs?</span>
+      <div class="radio-group" data-name="q09_newsfreq" data-required="true">
+        <label><input type="radio" name="q09_newsfreq" value="never"     data-key="q09_newsfreq"> Never</label>
+        <label><input type="radio" name="q09_newsfreq" value="rarely"    data-key="q09_newsfreq"> Rarely (a few times a month)</label>
+        <label><input type="radio" name="q09_newsfreq" value="sometimes" data-key="q09_newsfreq"> Sometimes (a few times a week)</label>
+        <label><input type="radio" name="q09_newsfreq" value="often"     data-key="q09_newsfreq"> Often (most days)</label>
+        <label><input type="radio" name="q09_newsfreq" value="everyday"  data-key="q09_newsfreq"> Every day</label>
+      </div>
+    </div>
+
+    <!-- Q10 News sources (multi-select) -->
+    <div class="q-block">
+      <span class="q-label">Q10. Where do you mainly get your news? <em>(Select all that apply)</em></span>
+      <div class="checkbox-group" data-name="q10_newssrc" data-required="false">
+        <label><input type="checkbox" name="q10_newssrc" value="bbc"           data-key="q10_newssrc"> BBC (TV, radio, or online)</label>
+        <label><input type="checkbox" name="q10_newssrc" value="itv_ch4_ch5"   data-key="q10_newssrc"> ITV / Channel 4 / Channel 5</label>
+        <label><input type="checkbox" name="q10_newssrc" value="sky"           data-key="q10_newssrc"> Sky News</label>
+        <label><input type="checkbox" name="q10_newssrc" value="print_paper"   data-key="q10_newssrc"> A print newspaper</label>
+        <label><input type="checkbox" name="q10_newssrc" value="online_paper"  data-key="q10_newssrc"> A newspaper website or app</label>
+        <label><input type="checkbox" name="q10_newssrc" value="social_media"  data-key="q10_newssrc"> Social media</label>
+        <label><input type="checkbox" name="q10_newssrc" value="other_online"  data-key="q10_newssrc"> Other online news sites</label>
+        <label><input type="checkbox" name="q10_newssrc" value="podcast_yt"    data-key="q10_newssrc"> Podcasts or YouTube</label>
+        <label><input type="checkbox" name="q10_newssrc" value="none"          data-key="q10_newssrc"> I do not follow the news</label>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(4)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 5: TRUST (Q11–Q12)
+       ======================================================== -->
+  <div class="section" id="section-5">
+    <p class="section-meta">Trust in institutions</p>
+    <h2>Trust in Institutions</h2>
+
+    <!-- Q11 Trust in government (1-7) -->
+    <div class="q-block trust-scale">
+      <span class="q-label">Q11. How much do you trust the UK government to tell the truth?</span>
+      <div class="likert-row">
+        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="1" data-key="q11_trust_gov"><span><span class="lk-num">1</span>Do not trust at all</span></label>
+        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="2" data-key="q11_trust_gov"><span><span class="lk-num">2</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="3" data-key="q11_trust_gov"><span><span class="lk-num">3</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="4" data-key="q11_trust_gov"><span><span class="lk-num">4</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="5" data-key="q11_trust_gov"><span><span class="lk-num">5</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="6" data-key="q11_trust_gov"><span><span class="lk-num">6</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="7" data-key="q11_trust_gov"><span><span class="lk-num">7</span>Trust completely</span></label>
+      </div>
+      <div class="radio-group" data-name="q11_trust_gov" data-required="true" style="display:none;"></div>
+    </div>
+
+    <!-- Q12 Trust in scientists (1-7) -->
+    <div class="q-block trust-scale">
+      <span class="q-label">Q12. How much do you trust scientists and scientific researchers?</span>
+      <div class="likert-row">
+        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="1" data-key="q12_trust_sci"><span><span class="lk-num">1</span>Do not trust at all</span></label>
+        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="2" data-key="q12_trust_sci"><span><span class="lk-num">2</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="3" data-key="q12_trust_sci"><span><span class="lk-num">3</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="4" data-key="q12_trust_sci"><span><span class="lk-num">4</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="5" data-key="q12_trust_sci"><span><span class="lk-num">5</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="6" data-key="q12_trust_sci"><span><span class="lk-num">6</span></span></label>
+        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="7" data-key="q12_trust_sci"><span><span class="lk-num">7</span>Trust completely</span></label>
+      </div>
+      <div class="radio-group" data-name="q12_trust_sci" data-required="true" style="display:none;"></div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(5)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 6: KNOWLEDGE + ATTN1 (Q13–Q15)
+       ======================================================== -->
+  <div class="section" id="section-6">
+    <p class="section-meta">Knowledge &amp; attention</p>
+    <h2>Policy Knowledge</h2>
+
+    <!-- Q13 Budget knowledge (5-point) -->
+    <div class="q-block">
+      <span class="q-label">Q13. How knowledgeable do you feel about how the UK government spends public money?</span>
+      <div class="radio-group" data-name="q13_budgknow" data-required="false">
+        <label><input type="radio" name="q13_budgknow" value="not_at_all" data-key="q13_budgknow"> Not at all knowledgeable</label>
+        <label><input type="radio" name="q13_budgknow" value="not_very"   data-key="q13_budgknow"> Not very knowledgeable</label>
+        <label><input type="radio" name="q13_budgknow" value="somewhat"   data-key="q13_budgknow"> Somewhat knowledgeable</label>
+        <label><input type="radio" name="q13_budgknow" value="fairly"     data-key="q13_budgknow"> Fairly knowledgeable</label>
+        <label><input type="radio" name="q13_budgknow" value="very"       data-key="q13_budgknow"> Very knowledgeable</label>
+      </div>
+    </div>
+
+    <!-- Q14 Media scepticism (5-point agree-disagree) -->
+    <div class="q-block">
+      <span class="q-label">Q14. Please indicate how much you agree or disagree with the following statement:</span>
+      <span class="q-sub">&ldquo;I tend to be sceptical of claims I see in the news or on social media.&rdquo;</span>
+      <div class="radio-group" data-name="q14_sceptic" data-required="false">
+        <label><input type="radio" name="q14_sceptic" value="strongly_disagree" data-key="q14_sceptic"> Strongly disagree</label>
+        <label><input type="radio" name="q14_sceptic" value="disagree"          data-key="q14_sceptic"> Disagree</label>
+        <label><input type="radio" name="q14_sceptic" value="neither"           data-key="q14_sceptic"> Neither agree nor disagree</label>
+        <label><input type="radio" name="q14_sceptic" value="agree"             data-key="q14_sceptic"> Agree</label>
+        <label><input type="radio" name="q14_sceptic" value="strongly_agree"    data-key="q14_sceptic"> Strongly agree</label>
+      </div>
+    </div>
+
+    <!-- Q15 Attention check 1 — correct answer: "Agree" -->
+    <div class="q-block">
+      <div class="attn-note">Please read this question carefully before answering.</div>
+      <span class="q-label">Q15. This question is a reading check. Please select <strong>&ldquo;Agree&rdquo;</strong> for this item, regardless of your personal opinion.</span>
+      <div class="radio-group" data-name="q15_attn1" data-required="true">
+        <label><input type="radio" name="q15_attn1" value="strongly_disagree" data-key="q15_attn1"> Strongly disagree</label>
+        <label><input type="radio" name="q15_attn1" value="disagree"          data-key="q15_attn1"> Disagree</label>
+        <label><input type="radio" name="q15_attn1" value="neither"           data-key="q15_attn1"> Neither agree nor disagree</label>
+        <label><input type="radio" name="q15_attn1" value="agree"             data-key="q15_attn1"> Agree</label>
+        <label><input type="radio" name="q15_attn1" value="strongly_agree"    data-key="q15_attn1"> Strongly agree</label>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(6)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 7: PERSONAL (Q16–Q18)
+       ======================================================== -->
+  <div class="section" id="section-7">
+    <p class="section-meta">Personal background</p>
+    <h2>A Few More Questions</h2>
+
+    <!-- Q16 Children under 18 -->
+    <div class="q-block">
+      <span class="q-label">Q16. Do you have any children under the age of 18 currently living in your household?</span>
+      <div class="radio-group" data-name="q16_children" data-required="false">
+        <label><input type="radio" name="q16_children" value="yes"  data-key="q16_children"> Yes</label>
+        <label><input type="radio" name="q16_children" value="no"   data-key="q16_children"> No</label>
+        <label><input type="radio" name="q16_children" value="pnts" data-key="q16_children"> Prefer not to say</label>
+      </div>
+    </div>
+
+    <!-- Q17 Numeracy 1 — number entry, correct answer: 20 -->
+    <div class="q-block">
+      <span class="q-label">Q17. A bag contains 100 balls: 20 are red and 80 are blue. If you pick one ball at random, what is the percentage chance of picking a red ball?</span>
+      <span class="q-sub">Enter a whole number. Do not include a % sign.</span>
+      <input type="number" id="q17_num1" name="q17_num1" data-key="q17_num1"
+             min="0" max="100" placeholder="Your answer" required>
+    </div>
+
+    <!-- Q18 Numeracy 2 — number entry, correct answer: 33 -->
+    <div class="q-block">
+      <span class="q-label">Q18. In a town of 1,000 people, 500 regularly read a newspaper. Of the 500 readers, 100 are under 30. Of the 500 non-readers, 200 are under 30. What is the probability (%) that a randomly chosen person under 30 is a newspaper reader?</span>
+      <span class="q-sub">Enter a whole number. Do not include a % sign.</span>
+      <input type="number" id="q18_num2" name="q18_num2" data-key="q18_num2"
+             min="0" max="100" placeholder="Your answer" required>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(7)">Continue to main study &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       CLAIM BLOCK 0 — PRE (Section 8)
+       Claim text, cred_pre, share_pre for claimsSeq[0]
+       ======================================================== -->
+  <div class="section" id="section-8">
+    <p class="section-meta">Claim 1 of 3</p>
+    <h2>Statement</h2>
+    <p>Please read the following statement carefully.</p>
+
+    <div class="claim-box">
+      <span class="claim-topic">[Topic loading&hellip;]</span>
+      <span class="claim-text">[Claim loading&hellip;]</span>
+    </div>
+
+    <!-- cred_pre (1-5) -->
+    <div class="q-block">
+      <span class="q-label">How accurate do you think this statement is?</span>
+      <div class="likert-row cred-likert">
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk0" value="1" data-key="cred_pre_blk0"><span><span class="lk-num">1</span>Definitely inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk0" value="2" data-key="cred_pre_blk0"><span><span class="lk-num">2</span>Probably inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk0" value="3" data-key="cred_pre_blk0"><span><span class="lk-num">3</span>Neither accurate nor inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk0" value="4" data-key="cred_pre_blk0"><span><span class="lk-num">4</span>Probably accurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk0" value="5" data-key="cred_pre_blk0"><span><span class="lk-num">5</span>Definitely accurate</span></label>
+      </div>
+      <div class="radio-group" data-name="cred_pre_blk0" data-required="true" style="display:none;"></div>
+    </div>
+
+    <!-- share_pre (0-100) -->
+    <div class="q-block">
+      <span class="q-label">If you came across this statement online, how likely would you be to share or forward it?</span>
+      <div class="range-wrap">
+        <div class="range-display"><span class="share-val" id="share_pre_blk0_val">50</span></div>
+        <input type="range" id="share_pre_blk0" class="share-range"
+               data-key="share_pre_blk0" min="0" max="100" value="50">
+        <div class="range-labels">
+          <span>0 &mdash; Would definitely not share</span>
+          <span>100 &mdash; Would definitely share</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(8)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       CLAIM BLOCK 0 — STIMULUS (Section 9)
+       Treatment: correction shown. Control: neutral filler.
+       ======================================================== -->
+  <div class="section" id="section-9">
+    <p class="section-meta">Claim 1 of 3 (continued)</p>
+    <h2>Additional Information</h2>
+
+    <div class="claim-box">
+      <span class="claim-topic">[Topic loading&hellip;]</span>
+      <span class="claim-text">[Claim loading&hellip;]</span>
+    </div>
+
+    <!-- Treatment: correction box (hidden until JS populates) -->
+    <div class="correction-box" style="display:none;">
+      <p class="correction-headline">[Headline loading&hellip;]</p>
+      <p class="correction-body">[Body loading&hellip;]</p>
+      <p class="correction-source">[Source loading&hellip;]</p>
+    </div>
+
+    <!-- Control: neutral filler (hidden until JS populates) -->
+    <div class="control-placeholder" style="display:none;">
+      <p>Thank you. Please continue to the next questions.</p>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(9)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       CLAIM BLOCK 0 — POST (Section 10)
+       ======================================================== -->
+  <div class="section" id="section-10">
+    <p class="section-meta">Claim 1 of 3 (continued)</p>
+    <h2>Your Views Now</h2>
+    <p>Thinking about the same statement again:</p>
+
+    <div class="claim-box">
+      <span class="claim-topic">[Topic loading&hellip;]</span>
+      <span class="claim-text">[Claim loading&hellip;]</span>
+    </div>
+
+    <!-- cred_post (1-5) -->
+    <div class="q-block">
+      <span class="q-label">How accurate do you <strong>now</strong> think this statement is?</span>
+      <div class="likert-row cred-likert">
+        <label class="likert-btn"><input type="radio" name="cred_post_blk0" value="1" data-key="cred_post_blk0"><span><span class="lk-num">1</span>Definitely inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk0" value="2" data-key="cred_post_blk0"><span><span class="lk-num">2</span>Probably inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk0" value="3" data-key="cred_post_blk0"><span><span class="lk-num">3</span>Neither accurate nor inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk0" value="4" data-key="cred_post_blk0"><span><span class="lk-num">4</span>Probably accurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk0" value="5" data-key="cred_post_blk0"><span><span class="lk-num">5</span>Definitely accurate</span></label>
+      </div>
+      <div class="radio-group" data-name="cred_post_blk0" data-required="true" style="display:none;"></div>
+    </div>
+
+    <!-- share_post (0-100) -->
+    <div class="q-block">
+      <span class="q-label">How likely would you <strong>now</strong> be to share or forward this statement?</span>
+      <div class="range-wrap">
+        <div class="range-display"><span class="share-val" id="share_post_blk0_val">50</span></div>
+        <input type="range" id="share_post_blk0" class="share-range"
+               data-key="share_post_blk0" min="0" max="100" value="50">
+        <div class="range-labels">
+          <span>0 &mdash; Would definitely not share</span>
+          <span>100 &mdash; Would definitely share</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(10)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       CLAIM BLOCK 1 — PRE (Section 11)
+       ======================================================== -->
+  <div class="section" id="section-11">
+    <p class="section-meta">Claim 2 of 3</p>
+    <h2>Statement</h2>
+    <p>Please read the following statement carefully.</p>
+
+    <div class="claim-box">
+      <span class="claim-topic">[Topic loading&hellip;]</span>
+      <span class="claim-text">[Claim loading&hellip;]</span>
+    </div>
+
+    <div class="q-block">
+      <span class="q-label">How accurate do you think this statement is?</span>
+      <div class="likert-row cred-likert">
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk1" value="1" data-key="cred_pre_blk1"><span><span class="lk-num">1</span>Definitely inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk1" value="2" data-key="cred_pre_blk1"><span><span class="lk-num">2</span>Probably inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk1" value="3" data-key="cred_pre_blk1"><span><span class="lk-num">3</span>Neither accurate nor inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk1" value="4" data-key="cred_pre_blk1"><span><span class="lk-num">4</span>Probably accurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk1" value="5" data-key="cred_pre_blk1"><span><span class="lk-num">5</span>Definitely accurate</span></label>
+      </div>
+      <div class="radio-group" data-name="cred_pre_blk1" data-required="true" style="display:none;"></div>
+    </div>
+
+    <div class="q-block">
+      <span class="q-label">If you came across this statement online, how likely would you be to share or forward it?</span>
+      <div class="range-wrap">
+        <div class="range-display"><span class="share-val" id="share_pre_blk1_val">50</span></div>
+        <input type="range" id="share_pre_blk1" class="share-range"
+               data-key="share_pre_blk1" min="0" max="100" value="50">
+        <div class="range-labels">
+          <span>0 &mdash; Would definitely not share</span>
+          <span>100 &mdash; Would definitely share</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(11)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- CLAIM BLOCK 1 — STIMULUS (Section 12) -->
+  <div class="section" id="section-12">
+    <p class="section-meta">Claim 2 of 3 (continued)</p>
+    <h2>Additional Information</h2>
+
+    <div class="claim-box">
+      <span class="claim-topic">[Topic loading&hellip;]</span>
+      <span class="claim-text">[Claim loading&hellip;]</span>
+    </div>
+
+    <div class="correction-box" style="display:none;">
+      <p class="correction-headline">[Headline loading&hellip;]</p>
+      <p class="correction-body">[Body loading&hellip;]</p>
+      <p class="correction-source">[Source loading&hellip;]</p>
+    </div>
+    <div class="control-placeholder" style="display:none;">
+      <p>Thank you. Please continue to the next questions.</p>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(12)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- CLAIM BLOCK 1 — POST (Section 13) -->
+  <div class="section" id="section-13">
+    <p class="section-meta">Claim 2 of 3 (continued)</p>
+    <h2>Your Views Now</h2>
+    <p>Thinking about the same statement again:</p>
+
+    <div class="claim-box">
+      <span class="claim-topic">[Topic loading&hellip;]</span>
+      <span class="claim-text">[Claim loading&hellip;]</span>
+    </div>
+
+    <div class="q-block">
+      <span class="q-label">How accurate do you <strong>now</strong> think this statement is?</span>
+      <div class="likert-row cred-likert">
+        <label class="likert-btn"><input type="radio" name="cred_post_blk1" value="1" data-key="cred_post_blk1"><span><span class="lk-num">1</span>Definitely inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk1" value="2" data-key="cred_post_blk1"><span><span class="lk-num">2</span>Probably inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk1" value="3" data-key="cred_post_blk1"><span><span class="lk-num">3</span>Neither accurate nor inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk1" value="4" data-key="cred_post_blk1"><span><span class="lk-num">4</span>Probably accurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk1" value="5" data-key="cred_post_blk1"><span><span class="lk-num">5</span>Definitely accurate</span></label>
+      </div>
+      <div class="radio-group" data-name="cred_post_blk1" data-required="true" style="display:none;"></div>
+    </div>
+
+    <div class="q-block">
+      <span class="q-label">How likely would you <strong>now</strong> be to share or forward this statement?</span>
+      <div class="range-wrap">
+        <div class="range-display"><span class="share-val" id="share_post_blk1_val">50</span></div>
+        <input type="range" id="share_post_blk1" class="share-range"
+               data-key="share_post_blk1" min="0" max="100" value="50">
+        <div class="range-labels">
+          <span>0 &mdash; Would definitely not share</span>
+          <span>100 &mdash; Would definitely share</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(13)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       CLAIM BLOCK 2 — PRE (Section 14)
+       ======================================================== -->
+  <div class="section" id="section-14">
+    <p class="section-meta">Claim 3 of 3</p>
+    <h2>Statement</h2>
+    <p>Please read the following statement carefully.</p>
+
+    <div class="claim-box">
+      <span class="claim-topic">[Topic loading&hellip;]</span>
+      <span class="claim-text">[Claim loading&hellip;]</span>
+    </div>
+
+    <div class="q-block">
+      <span class="q-label">How accurate do you think this statement is?</span>
+      <div class="likert-row cred-likert">
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk2" value="1" data-key="cred_pre_blk2"><span><span class="lk-num">1</span>Definitely inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk2" value="2" data-key="cred_pre_blk2"><span><span class="lk-num">2</span>Probably inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk2" value="3" data-key="cred_pre_blk2"><span><span class="lk-num">3</span>Neither accurate nor inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk2" value="4" data-key="cred_pre_blk2"><span><span class="lk-num">4</span>Probably accurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_pre_blk2" value="5" data-key="cred_pre_blk2"><span><span class="lk-num">5</span>Definitely accurate</span></label>
+      </div>
+      <div class="radio-group" data-name="cred_pre_blk2" data-required="true" style="display:none;"></div>
+    </div>
+
+    <div class="q-block">
+      <span class="q-label">If you came across this statement online, how likely would you be to share or forward it?</span>
+      <div class="range-wrap">
+        <div class="range-display"><span class="share-val" id="share_pre_blk2_val">50</span></div>
+        <input type="range" id="share_pre_blk2" class="share-range"
+               data-key="share_pre_blk2" min="0" max="100" value="50">
+        <div class="range-labels">
+          <span>0 &mdash; Would definitely not share</span>
+          <span>100 &mdash; Would definitely share</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(14)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- CLAIM BLOCK 2 — STIMULUS (Section 15) -->
+  <div class="section" id="section-15">
+    <p class="section-meta">Claim 3 of 3 (continued)</p>
+    <h2>Additional Information</h2>
+
+    <div class="claim-box">
+      <span class="claim-topic">[Topic loading&hellip;]</span>
+      <span class="claim-text">[Claim loading&hellip;]</span>
+    </div>
+
+    <div class="correction-box" style="display:none;">
+      <p class="correction-headline">[Headline loading&hellip;]</p>
+      <p class="correction-body">[Body loading&hellip;]</p>
+      <p class="correction-source">[Source loading&hellip;]</p>
+    </div>
+    <div class="control-placeholder" style="display:none;">
+      <p>Thank you. Please continue to the next questions.</p>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(15)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- CLAIM BLOCK 2 — POST (Section 16) -->
+  <div class="section" id="section-16">
+    <p class="section-meta">Claim 3 of 3 (continued)</p>
+    <h2>Your Views Now</h2>
+    <p>Thinking about the same statement again:</p>
+
+    <div class="claim-box">
+      <span class="claim-topic">[Topic loading&hellip;]</span>
+      <span class="claim-text">[Claim loading&hellip;]</span>
+    </div>
+
+    <div class="q-block">
+      <span class="q-label">How accurate do you <strong>now</strong> think this statement is?</span>
+      <div class="likert-row cred-likert">
+        <label class="likert-btn"><input type="radio" name="cred_post_blk2" value="1" data-key="cred_post_blk2"><span><span class="lk-num">1</span>Definitely inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk2" value="2" data-key="cred_post_blk2"><span><span class="lk-num">2</span>Probably inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk2" value="3" data-key="cred_post_blk2"><span><span class="lk-num">3</span>Neither accurate nor inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk2" value="4" data-key="cred_post_blk2"><span><span class="lk-num">4</span>Probably accurate</span></label>
+        <label class="likert-btn"><input type="radio" name="cred_post_blk2" value="5" data-key="cred_post_blk2"><span><span class="lk-num">5</span>Definitely accurate</span></label>
+      </div>
+      <div class="radio-group" data-name="cred_post_blk2" data-required="true" style="display:none;"></div>
+    </div>
+
+    <div class="q-block">
+      <span class="q-label">How likely would you <strong>now</strong> be to share or forward this statement?</span>
+      <div class="range-wrap">
+        <div class="range-display"><span class="share-val" id="share_post_blk2_val">50</span></div>
+        <input type="range" id="share_post_blk2" class="share-range"
+               data-key="share_post_blk2" min="0" max="100" value="50">
+        <div class="range-labels">
+          <span>0 &mdash; Would definitely not share</span>
+          <span>100 &mdash; Would definitely share</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(16)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 17: ATTENTION CHECK 2
+       Framed as a fourth "statement" — correct answer: 1 (Definitely inaccurate)
+       ======================================================== -->
+  <div class="section" id="section-17">
+    <p class="section-meta">Final check</p>
+    <h2>One More Statement</h2>
+
+    <div class="q-block">
+      <div class="attn-note">Please answer carefully.</div>
+      <span class="q-label">How accurate do you think the following statement is?</span>
+      <div class="claim-box">
+        <span class="claim-text">&ldquo;The sky is bright green during the daytime in the UK.&rdquo;</span>
+      </div>
+      <div class="likert-row cred-likert">
+        <label class="likert-btn"><input type="radio" name="attn2" value="1" data-key="attn2"><span><span class="lk-num">1</span>Definitely inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="attn2" value="2" data-key="attn2"><span><span class="lk-num">2</span>Probably inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="attn2" value="3" data-key="attn2"><span><span class="lk-num">3</span>Neither accurate nor inaccurate</span></label>
+        <label class="likert-btn"><input type="radio" name="attn2" value="4" data-key="attn2"><span><span class="lk-num">4</span>Probably accurate</span></label>
+        <label class="likert-btn"><input type="radio" name="attn2" value="5" data-key="attn2"><span><span class="lk-num">5</span>Definitely accurate</span></label>
+      </div>
+      <div class="radio-group" data-name="attn2" data-required="true" style="display:none;"></div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="nextSection(17)">Continue to debrief &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 18: DEBRIEF
+       ======================================================== -->
+  <div class="section" id="section-18">
+    <p class="section-meta">Debrief</p>
+    <h2>Thank You for Completing This Survey</h2>
+
+    <div class="info-box">
+      This study was examining how people respond to factual information about statements they have seen. The three statements you evaluated were examples of claims that circulate online but are <strong>inaccurate</strong>. Here is the accurate information for each:
+    </div>
+
+    <div class="debrief-claim">
+      <p class="original-claim">&ldquo;The UK government spends about 5% of its annual budget on scientific research and development.&rdquo;</p>
+      <p class="correction-headline">UK government spending on scientific research and development:</p>
+      <p>The UK government spent approximately <strong>&pound;17.4 billion</strong> on R&amp;D in 2023, approximately <strong>1.3%</strong> of total government expenditure &mdash; not 5%.</p>
+      <p class="correction-source">Source: ONS (2023).</p>
+    </div>
+
+    <div class="debrief-claim">
+      <p class="original-claim">&ldquo;The UK government currently spends around 10% of its annual budget on overseas foreign aid.&rdquo;</p>
+      <p class="correction-headline">UK government spending on overseas foreign aid:</p>
+      <p>The UK spent <strong>&pound;15.4 billion</strong> on overseas aid in 2023 &mdash; <strong>1.2%</strong> of total government expenditure &mdash; not 10%.</p>
+      <p class="correction-source">Source: FCDO (2024).</p>
+    </div>
+
+    <div class="debrief-claim">
+      <p class="original-claim">&ldquo;Scientific studies have shown that eating sugary foods causes children to become hyperactive and difficult to manage.&rdquo;</p>
+      <p class="correction-headline">Sugar and children&rsquo;s behaviour:</p>
+      <p>Scientific research does <strong>not</strong> support the idea that sugar causes hyperactivity in children. A meta-analysis of 23 controlled trials found no evidence for this effect.</p>
+      <p class="correction-source">Source: Wolraich et al. (1995). JAMA 274(20):1617&ndash;1621.</p>
+    </div>
+
+    <hr class="divider">
+
+    <p>If you have any questions about this study, please contact: <strong>y.liao.1@bham.ac.uk</strong></p>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="submitSurvey()">Submit and complete &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 19: COMPLETE
+       ======================================================== -->
+  <div class="section" id="section-19">
+    <div class="complete-icon">&#10003;</div>
+    <h1>Thank You &mdash; Your Response Has Been Recorded</h1>
+    <p>You will now be redirected to Prolific automatically.</p>
+    <p class="redirect-note">Redirecting in 3 seconds&hellip; If you are not redirected, <a href="#" id="manual-redirect-link">click here</a>.</p>
+  </div>
+
+</main>
+
+<script src="js/survey.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const link = document.getElementById('manual-redirect-link');
+    if (link) link.href = SURVEY_CONFIG.COMPLETION_URL;
+  });
+</script>
+
+</body>
+</html>
