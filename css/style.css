@@ -350,6 +350,7 @@ input[type="number"].input-error { border-color: var(--red); }
 .trust-scale { }
 
 .trust-scale .likert-row .likert-btn span { min-height: 52px; font-size: 12px; }
+.trust-scale .likert-btn { min-width: 0; }
 
 /* ---- LR political scale (0-10, wider) ---- */
 .lr-scale .likert-row {
@@ -361,6 +362,10 @@ input[type="number"].input-error { border-color: var(--red); }
   font-size: 11px;
   padding: 8px 4px;
 }
+.lr-scale .likert-btn { min-width: 0; }
+
+/* ---- Cred accuracy scale (1-5, number-only buttons) ---- */
+.cred-likert .likert-btn span { min-height: 52px; }
 
 .scale-endpoints {
   display: flex;
@@ -390,7 +395,7 @@ input[type="range"] {
   margin: 6px 0 2px;
 }
 
-.range-display.untouched {
+.share-val.untouched {
   color: var(--grey-300);
   font-size: 18px;
   letter-spacing: 0.1em;
