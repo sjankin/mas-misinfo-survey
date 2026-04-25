@@ -155,7 +155,7 @@ function populateClaimBlock(blockIdx) {
     preSec.querySelectorAll('.claim-topic').forEach(el => el.textContent = claim.topic);
     preSec.querySelectorAll('.claim-text').forEach(el  => el.textContent = claim.claim);
     // Update radio names/data-keys for credibility
-    preSec.querySelectorAll('.cred-likert input[type="radio"]').forEach(inp => {
+    preSec.querySelectorAll('.cred-radio input[type="radio"]').forEach(inp => {
       inp.name         = 'cred_pre_' + lc;
       inp.dataset.key  = 'cred_pre_' + lc;
     });
@@ -194,7 +194,7 @@ function populateClaimBlock(blockIdx) {
   if (postSec) {
     postSec.querySelectorAll('.claim-topic').forEach(el => el.textContent = claim.topic);
     postSec.querySelectorAll('.claim-text').forEach(el  => el.textContent = claim.claim);
-    postSec.querySelectorAll('.cred-likert input[type="radio"]').forEach(inp => {
+    postSec.querySelectorAll('.cred-radio input[type="radio"]').forEach(inp => {
       inp.name        = 'cred_post_' + lc;
       inp.dataset.key = 'cred_post_' + lc;
     });

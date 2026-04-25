@@ -364,8 +364,6 @@ input[type="number"].input-error { border-color: var(--red); }
 }
 .lr-scale .likert-btn { min-width: 0; }
 
-/* ---- Cred accuracy scale (1-5, number-only buttons) ---- */
-.cred-likert .likert-btn span { min-height: 52px; }
 
 .scale-endpoints {
   display: flex;
