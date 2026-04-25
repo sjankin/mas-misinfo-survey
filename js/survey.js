@@ -114,10 +114,6 @@ async function init() {
   // Backup to localStorage immediately
   saveToLocalStorage();
 
-  // Prevent back-button navigation
-  history.pushState(null, '', location.href);
-  window.addEventListener('popstate', () => history.pushState(null, '', location.href));
-
   // Reveal consent section
   showSection(1);
 }
@@ -220,13 +216,19 @@ function populateClaimBlock(blockIdx) {
     if (!slider) return;
     const display = document.getElementById(slider.id + '_val');
     if (display) {
-      display.textContent = slider.value;
-      // Remove old listeners by cloning
+      // Reset to untouched state
+      display.textContent = '\u2014';
+      display.classList.add('untouched');
+      // Remove old listeners by cloning, resetting touch state
       const newSlider = slider.cloneNode(true);
+      newSlider.dataset.touched = '';
       slider.parentNode.replaceChild(newSlider, slider);
       newSlider.addEventListener('input', () => {
         const d = document.getElementById(newSlider.id + '_val');
-        if (d) d.textContent = newSlider.value;
+        if (d) {
+          d.textContent = newSlider.value;
+          d.classList.remove('untouched');
+        }
         newSlider.dataset.touched = 'true';
       });
     }
@@ -296,6 +298,15 @@ function validateSection(secId) {
     }
   });
 
+  // Check required-touch range sliders
+  sec.querySelectorAll('input[type="range"][data-required-touch="true"]').forEach(slider => {
+    if (slider.dataset.touched !== 'true') {
+      valid = false;
+      const block = slider.closest('.q-block');
+      appendError(block || slider.parentNode, 'Please move the slider to indicate your response.');
+    }
+  });
+
   // Check text/number inputs
   sec.querySelectorAll('input[required][type="text"], input[required][type="number"]').forEach(inp => {
     if (!inp.value.trim()) {
@@ -342,6 +353,13 @@ function collectSection(secId) {
       state.responses[key] = el.value;
     }
   });
+}
+
+// ============================================================
+// PREV — go back one section (no back buttons on stimulus sections 9, 12, 15)
+// ============================================================
+function prevSection(from) {
+  showSection(from - 1);
 }
 
 // ============================================================

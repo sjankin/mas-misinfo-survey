@@ -168,10 +168,28 @@ p:last-child { margin-bottom: 0; }
   outline-offset: 2px;
 }
 
+.btn-secondary {
+  background: #fff;
+  color: var(--grey-600);
+  border: 1.5px solid var(--grey-300);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background: var(--grey-100);
+  border-color: var(--grey-600);
+  outline: 3px solid var(--grey-200);
+  outline-offset: 2px;
+}
+
 .btn-row {
   margin-top: 28px;
   display: flex;
-  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Single primary button stays right-aligned; back button anchors left */
+.btn-row .btn-primary {
+  margin-left: auto;
 }
 
 /* ---- Select dropdowns ---- */
@@ -370,6 +388,12 @@ input[type="range"] {
   font-weight: 700;
   color: var(--blue);
   margin: 6px 0 2px;
+}
+
+.range-display.untouched {
+  color: var(--grey-300);
+  font-size: 18px;
+  letter-spacing: 0.1em;
 }
 
 .range-labels {
@@ -582,6 +606,11 @@ input[type="range"] {
     min-height: 56px;
   }
 
-  .btn { width: 100%; text-align: center; }
-  .btn-row { justify-content: center; }
+  /* LR scale (0–10): wrap into 2 rows (6+5) for adequate touch targets */
+  .lr-scale .likert-row {
+    flex-wrap: wrap;
+  }
+  .lr-scale .likert-btn {
+    flex: 0 0 calc((100% - 5 * 4px) / 6);
+  }
 }

@@ -62,12 +62,13 @@
 
     <div class="q-block">
       <span class="q-label">Please confirm your consent to participate:</span>
-      <div class="radio-group" data-name="consent" data-required="true">
+      <div class="checkbox-group" data-name="consent" data-required="true">
         <label>
-          <input type="radio" name="consent" value="agree" data-key="consent">
+          <input type="checkbox" name="consent" value="agree" data-key="consent">
           I have read the above information. I understand that participation is voluntary, that I may withdraw my submitted data within 14 days of completion by contacting the lead researcher, and that my data will be fully anonymised within 14 days of data collection closing. I agree to take part.
         </label>
       </div>
+
     </div>
 
     <div class="btn-row">
@@ -155,6 +156,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(2)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(2)">Next &rarr;</button>
     </div>
   </div>
@@ -217,6 +219,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(3)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(3)">Next &rarr;</button>
     </div>
   </div>
@@ -257,6 +260,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(4)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(4)">Next &rarr;</button>
     </div>
   </div>
@@ -272,13 +276,17 @@
     <div class="q-block trust-scale">
       <span class="q-label">Q11. How much do you trust the UK government to tell the truth?</span>
       <div class="likert-row">
-        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="1" data-key="q11_trust_gov"><span><span class="lk-num">1</span>Do not trust at all</span></label>
+        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="1" data-key="q11_trust_gov"><span><span class="lk-num">1</span></span></label>
         <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="2" data-key="q11_trust_gov"><span><span class="lk-num">2</span></span></label>
         <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="3" data-key="q11_trust_gov"><span><span class="lk-num">3</span></span></label>
         <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="4" data-key="q11_trust_gov"><span><span class="lk-num">4</span></span></label>
         <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="5" data-key="q11_trust_gov"><span><span class="lk-num">5</span></span></label>
         <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="6" data-key="q11_trust_gov"><span><span class="lk-num">6</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="7" data-key="q11_trust_gov"><span><span class="lk-num">7</span>Trust completely</span></label>
+        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="7" data-key="q11_trust_gov"><span><span class="lk-num">7</span></span></label>
+      </div>
+      <div class="scale-endpoints">
+        <span>1 &mdash; Do not trust at all</span>
+        <span>7 &mdash; Trust completely</span>
       </div>
       <div class="radio-group" data-name="q11_trust_gov" data-required="true" style="display:none;"></div>
     </div>
@@ -287,18 +295,23 @@
     <div class="q-block trust-scale">
       <span class="q-label">Q12. How much do you trust scientists and scientific researchers?</span>
       <div class="likert-row">
-        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="1" data-key="q12_trust_sci"><span><span class="lk-num">1</span>Do not trust at all</span></label>
+        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="1" data-key="q12_trust_sci"><span><span class="lk-num">1</span></span></label>
         <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="2" data-key="q12_trust_sci"><span><span class="lk-num">2</span></span></label>
         <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="3" data-key="q12_trust_sci"><span><span class="lk-num">3</span></span></label>
         <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="4" data-key="q12_trust_sci"><span><span class="lk-num">4</span></span></label>
         <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="5" data-key="q12_trust_sci"><span><span class="lk-num">5</span></span></label>
         <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="6" data-key="q12_trust_sci"><span><span class="lk-num">6</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="7" data-key="q12_trust_sci"><span><span class="lk-num">7</span>Trust completely</span></label>
+        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="7" data-key="q12_trust_sci"><span><span class="lk-num">7</span></span></label>
+      </div>
+      <div class="scale-endpoints">
+        <span>1 &mdash; Do not trust at all</span>
+        <span>7 &mdash; Trust completely</span>
       </div>
       <div class="radio-group" data-name="q12_trust_sci" data-required="true" style="display:none;"></div>
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(5)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(5)">Next &rarr;</button>
     </div>
   </div>
@@ -349,6 +362,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(6)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(6)">Next &rarr;</button>
     </div>
   </div>
@@ -387,7 +401,8 @@
     </div>
 
     <div class="btn-row">
-      <button class="btn btn-primary" onclick="nextSection(7)">Continue to main study &rarr;</button>
+      <button class="btn btn-secondary" onclick="prevSection(7)">&larr; Back</button>
+      <button class="btn btn-primary" onclick="nextSection(7)">Continue &rarr;</button>
     </div>
   </div>
 
@@ -401,8 +416,8 @@
     <p>Please read the following statement carefully.</p>
 
     <div class="claim-box">
-      <span class="claim-topic">[Topic loading&hellip;]</span>
-      <span class="claim-text">[Claim loading&hellip;]</span>
+      <span class="claim-topic"></span>
+      <span class="claim-text"></span>
     </div>
 
     <!-- cred_pre (1-5) -->
@@ -424,7 +439,7 @@
       <div class="range-wrap">
         <div class="range-display"><span class="share-val" id="share_pre_blk0_val">50</span></div>
         <input type="range" id="share_pre_blk0" class="share-range"
-               data-key="share_pre_blk0" min="0" max="100" value="50">
+               data-key="share_pre_blk0" data-required-touch="true" min="0" max="100" value="50">
         <div class="range-labels">
           <span>0 &mdash; Would definitely not share</span>
           <span>100 &mdash; Would definitely share</span>
@@ -433,6 +448,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(8)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(8)">Next &rarr;</button>
     </div>
   </div>
@@ -446,15 +462,15 @@
     <h2>Additional Information</h2>
 
     <div class="claim-box">
-      <span class="claim-topic">[Topic loading&hellip;]</span>
-      <span class="claim-text">[Claim loading&hellip;]</span>
+      <span class="claim-topic"></span>
+      <span class="claim-text"></span>
     </div>
 
     <!-- Treatment: correction box (hidden until JS populates) -->
     <div class="correction-box" style="display:none;">
-      <p class="correction-headline">[Headline loading&hellip;]</p>
-      <p class="correction-body">[Body loading&hellip;]</p>
-      <p class="correction-source">[Source loading&hellip;]</p>
+      <p class="correction-headline"></p>
+      <p class="correction-body"></p>
+      <p class="correction-source"></p>
     </div>
 
     <!-- Control: neutral filler (hidden until JS populates) -->
@@ -476,8 +492,8 @@
     <p>Thinking about the same statement again:</p>
 
     <div class="claim-box">
-      <span class="claim-topic">[Topic loading&hellip;]</span>
-      <span class="claim-text">[Claim loading&hellip;]</span>
+      <span class="claim-topic"></span>
+      <span class="claim-text"></span>
     </div>
 
     <!-- cred_post (1-5) -->
@@ -499,7 +515,7 @@
       <div class="range-wrap">
         <div class="range-display"><span class="share-val" id="share_post_blk0_val">50</span></div>
         <input type="range" id="share_post_blk0" class="share-range"
-               data-key="share_post_blk0" min="0" max="100" value="50">
+               data-key="share_post_blk0" data-required-touch="true" min="0" max="100" value="50">
         <div class="range-labels">
           <span>0 &mdash; Would definitely not share</span>
           <span>100 &mdash; Would definitely share</span>
@@ -508,6 +524,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(10)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(10)">Next &rarr;</button>
     </div>
   </div>
@@ -521,8 +538,8 @@
     <p>Please read the following statement carefully.</p>
 
     <div class="claim-box">
-      <span class="claim-topic">[Topic loading&hellip;]</span>
-      <span class="claim-text">[Claim loading&hellip;]</span>
+      <span class="claim-topic"></span>
+      <span class="claim-text"></span>
     </div>
 
     <div class="q-block">
@@ -542,7 +559,7 @@
       <div class="range-wrap">
         <div class="range-display"><span class="share-val" id="share_pre_blk1_val">50</span></div>
         <input type="range" id="share_pre_blk1" class="share-range"
-               data-key="share_pre_blk1" min="0" max="100" value="50">
+               data-key="share_pre_blk1" data-required-touch="true" min="0" max="100" value="50">
         <div class="range-labels">
           <span>0 &mdash; Would definitely not share</span>
           <span>100 &mdash; Would definitely share</span>
@@ -551,6 +568,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(11)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(11)">Next &rarr;</button>
     </div>
   </div>
@@ -561,14 +579,14 @@
     <h2>Additional Information</h2>
 
     <div class="claim-box">
-      <span class="claim-topic">[Topic loading&hellip;]</span>
-      <span class="claim-text">[Claim loading&hellip;]</span>
+      <span class="claim-topic"></span>
+      <span class="claim-text"></span>
     </div>
 
     <div class="correction-box" style="display:none;">
-      <p class="correction-headline">[Headline loading&hellip;]</p>
-      <p class="correction-body">[Body loading&hellip;]</p>
-      <p class="correction-source">[Source loading&hellip;]</p>
+      <p class="correction-headline"></p>
+      <p class="correction-body"></p>
+      <p class="correction-source"></p>
     </div>
     <div class="control-placeholder" style="display:none;">
       <p>Thank you. Please continue to the next questions.</p>
@@ -586,8 +604,8 @@
     <p>Thinking about the same statement again:</p>
 
     <div class="claim-box">
-      <span class="claim-topic">[Topic loading&hellip;]</span>
-      <span class="claim-text">[Claim loading&hellip;]</span>
+      <span class="claim-topic"></span>
+      <span class="claim-text"></span>
     </div>
 
     <div class="q-block">
@@ -607,7 +625,7 @@
       <div class="range-wrap">
         <div class="range-display"><span class="share-val" id="share_post_blk1_val">50</span></div>
         <input type="range" id="share_post_blk1" class="share-range"
-               data-key="share_post_blk1" min="0" max="100" value="50">
+               data-key="share_post_blk1" data-required-touch="true" min="0" max="100" value="50">
         <div class="range-labels">
           <span>0 &mdash; Would definitely not share</span>
           <span>100 &mdash; Would definitely share</span>
@@ -616,6 +634,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(13)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(13)">Next &rarr;</button>
     </div>
   </div>
@@ -629,8 +648,8 @@
     <p>Please read the following statement carefully.</p>
 
     <div class="claim-box">
-      <span class="claim-topic">[Topic loading&hellip;]</span>
-      <span class="claim-text">[Claim loading&hellip;]</span>
+      <span class="claim-topic"></span>
+      <span class="claim-text"></span>
     </div>
 
     <div class="q-block">
@@ -650,7 +669,7 @@
       <div class="range-wrap">
         <div class="range-display"><span class="share-val" id="share_pre_blk2_val">50</span></div>
         <input type="range" id="share_pre_blk2" class="share-range"
-               data-key="share_pre_blk2" min="0" max="100" value="50">
+               data-key="share_pre_blk2" data-required-touch="true" min="0" max="100" value="50">
         <div class="range-labels">
           <span>0 &mdash; Would definitely not share</span>
           <span>100 &mdash; Would definitely share</span>
@@ -659,6 +678,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(14)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(14)">Next &rarr;</button>
     </div>
   </div>
@@ -669,14 +689,14 @@
     <h2>Additional Information</h2>
 
     <div class="claim-box">
-      <span class="claim-topic">[Topic loading&hellip;]</span>
-      <span class="claim-text">[Claim loading&hellip;]</span>
+      <span class="claim-topic"></span>
+      <span class="claim-text"></span>
     </div>
 
     <div class="correction-box" style="display:none;">
-      <p class="correction-headline">[Headline loading&hellip;]</p>
-      <p class="correction-body">[Body loading&hellip;]</p>
-      <p class="correction-source">[Source loading&hellip;]</p>
+      <p class="correction-headline"></p>
+      <p class="correction-body"></p>
+      <p class="correction-source"></p>
     </div>
     <div class="control-placeholder" style="display:none;">
       <p>Thank you. Please continue to the next questions.</p>
@@ -694,8 +714,8 @@
     <p>Thinking about the same statement again:</p>
 
     <div class="claim-box">
-      <span class="claim-topic">[Topic loading&hellip;]</span>
-      <span class="claim-text">[Claim loading&hellip;]</span>
+      <span class="claim-topic"></span>
+      <span class="claim-text"></span>
     </div>
 
     <div class="q-block">
@@ -715,7 +735,7 @@
       <div class="range-wrap">
         <div class="range-display"><span class="share-val" id="share_post_blk2_val">50</span></div>
         <input type="range" id="share_post_blk2" class="share-range"
-               data-key="share_post_blk2" min="0" max="100" value="50">
+               data-key="share_post_blk2" data-required-touch="true" min="0" max="100" value="50">
         <div class="range-labels">
           <span>0 &mdash; Would definitely not share</span>
           <span>100 &mdash; Would definitely share</span>
@@ -724,6 +744,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(16)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(16)">Next &rarr;</button>
     </div>
   </div>
@@ -753,6 +774,7 @@
     </div>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(17)">&larr; Back</button>
       <button class="btn btn-primary" onclick="nextSection(17)">Continue to debrief &rarr;</button>
     </div>
   </div>
@@ -794,6 +816,7 @@
     <p>If you have any questions about this study, please contact: <strong>y.liao.1@bham.ac.uk</strong></p>
 
     <div class="btn-row">
+      <button class="btn btn-secondary" onclick="prevSection(18)">&larr; Back</button>
       <button class="btn btn-primary" onclick="submitSurvey()">Submit and complete &rarr;</button>
     </div>
   </div>
