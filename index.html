@@ -169,26 +169,21 @@
     <h2>Your Political Views</h2>
 
     <!-- Q06 Left-Right self-placement (0-10) -->
-    <div class="q-block lr-scale">
+    <div class="q-block">
       <span class="q-label">Q6. On a scale from 0 to 10, where would you place yourself politically?</span>
-      <div class="likert-row">
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="0"  data-key="q06_lr"><span><span class="lk-num">0</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="1"  data-key="q06_lr"><span><span class="lk-num">1</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="2"  data-key="q06_lr"><span><span class="lk-num">2</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="3"  data-key="q06_lr"><span><span class="lk-num">3</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="4"  data-key="q06_lr"><span><span class="lk-num">4</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="5"  data-key="q06_lr"><span><span class="lk-num">5</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="6"  data-key="q06_lr"><span><span class="lk-num">6</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="7"  data-key="q06_lr"><span><span class="lk-num">7</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="8"  data-key="q06_lr"><span><span class="lk-num">8</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="9"  data-key="q06_lr"><span><span class="lk-num">9</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q06_lr" value="10" data-key="q06_lr"><span><span class="lk-num">10</span></span></label>
+      <div class="radio-group" data-name="q06_lr" data-required="true">
+        <label><input type="radio" name="q06_lr" value="0"  data-key="q06_lr"> 0 &mdash; Very left-wing</label>
+        <label><input type="radio" name="q06_lr" value="1"  data-key="q06_lr"> 1</label>
+        <label><input type="radio" name="q06_lr" value="2"  data-key="q06_lr"> 2</label>
+        <label><input type="radio" name="q06_lr" value="3"  data-key="q06_lr"> 3</label>
+        <label><input type="radio" name="q06_lr" value="4"  data-key="q06_lr"> 4</label>
+        <label><input type="radio" name="q06_lr" value="5"  data-key="q06_lr"> 5 &mdash; Centre</label>
+        <label><input type="radio" name="q06_lr" value="6"  data-key="q06_lr"> 6</label>
+        <label><input type="radio" name="q06_lr" value="7"  data-key="q06_lr"> 7</label>
+        <label><input type="radio" name="q06_lr" value="8"  data-key="q06_lr"> 8</label>
+        <label><input type="radio" name="q06_lr" value="9"  data-key="q06_lr"> 9</label>
+        <label><input type="radio" name="q06_lr" value="10" data-key="q06_lr"> 10 &mdash; Very right-wing</label>
       </div>
-      <div class="scale-endpoints">
-        <span>0 &mdash; Very left-wing</span>
-        <span>10 &mdash; Very right-wing</span>
-      </div>
-      <div class="radio-group" data-name="q06_lr" data-required="true"></div>
     </div>
 
     <!-- Q07 Party identification -->
@@ -246,7 +241,7 @@
     <!-- Q10 News sources (multi-select) -->
     <div class="q-block">
       <span class="q-label">Q10. Where do you mainly get your news? <em>(Select all that apply)</em></span>
-      <div class="checkbox-group" data-name="q10_newssrc" data-required="false">
+      <div class="checkbox-group" data-name="q10_newssrc" data-required="true">
         <label><input type="checkbox" name="q10_newssrc" value="bbc"           data-key="q10_newssrc"> BBC (TV, radio, or online)</label>
         <label><input type="checkbox" name="q10_newssrc" value="itv_ch4_ch5"   data-key="q10_newssrc"> ITV / Channel 4 / Channel 5</label>
         <label><input type="checkbox" name="q10_newssrc" value="sky"           data-key="q10_newssrc"> Sky News</label>
@@ -273,41 +268,31 @@
     <h2>Trust in Institutions</h2>
 
     <!-- Q11 Trust in government (1-7) -->
-    <div class="q-block trust-scale">
+    <div class="q-block">
       <span class="q-label">Q11. How much do you trust the UK government to tell the truth?</span>
-      <div class="likert-row">
-        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="1" data-key="q11_trust_gov"><span><span class="lk-num">1</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="2" data-key="q11_trust_gov"><span><span class="lk-num">2</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="3" data-key="q11_trust_gov"><span><span class="lk-num">3</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="4" data-key="q11_trust_gov"><span><span class="lk-num">4</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="5" data-key="q11_trust_gov"><span><span class="lk-num">5</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="6" data-key="q11_trust_gov"><span><span class="lk-num">6</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q11_trust_gov" value="7" data-key="q11_trust_gov"><span><span class="lk-num">7</span></span></label>
+      <div class="radio-group" data-name="q11_trust_gov" data-required="true">
+        <label><input type="radio" name="q11_trust_gov" value="1" data-key="q11_trust_gov"> 1 &mdash; Do not trust at all</label>
+        <label><input type="radio" name="q11_trust_gov" value="2" data-key="q11_trust_gov"> 2</label>
+        <label><input type="radio" name="q11_trust_gov" value="3" data-key="q11_trust_gov"> 3</label>
+        <label><input type="radio" name="q11_trust_gov" value="4" data-key="q11_trust_gov"> 4 &mdash; Neutral</label>
+        <label><input type="radio" name="q11_trust_gov" value="5" data-key="q11_trust_gov"> 5</label>
+        <label><input type="radio" name="q11_trust_gov" value="6" data-key="q11_trust_gov"> 6</label>
+        <label><input type="radio" name="q11_trust_gov" value="7" data-key="q11_trust_gov"> 7 &mdash; Trust completely</label>
       </div>
-      <div class="scale-endpoints">
-        <span>1 &mdash; Do not trust at all</span>
-        <span>7 &mdash; Trust completely</span>
-      </div>
-      <div class="radio-group" data-name="q11_trust_gov" data-required="true"></div>
     </div>
 
     <!-- Q12 Trust in scientists (1-7) -->
-    <div class="q-block trust-scale">
+    <div class="q-block">
       <span class="q-label">Q12. How much do you trust scientists and scientific researchers?</span>
-      <div class="likert-row">
-        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="1" data-key="q12_trust_sci"><span><span class="lk-num">1</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="2" data-key="q12_trust_sci"><span><span class="lk-num">2</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="3" data-key="q12_trust_sci"><span><span class="lk-num">3</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="4" data-key="q12_trust_sci"><span><span class="lk-num">4</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="5" data-key="q12_trust_sci"><span><span class="lk-num">5</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="6" data-key="q12_trust_sci"><span><span class="lk-num">6</span></span></label>
-        <label class="likert-btn"><input type="radio" name="q12_trust_sci" value="7" data-key="q12_trust_sci"><span><span class="lk-num">7</span></span></label>
+      <div class="radio-group" data-name="q12_trust_sci" data-required="true">
+        <label><input type="radio" name="q12_trust_sci" value="1" data-key="q12_trust_sci"> 1 &mdash; Do not trust at all</label>
+        <label><input type="radio" name="q12_trust_sci" value="2" data-key="q12_trust_sci"> 2</label>
+        <label><input type="radio" name="q12_trust_sci" value="3" data-key="q12_trust_sci"> 3</label>
+        <label><input type="radio" name="q12_trust_sci" value="4" data-key="q12_trust_sci"> 4 &mdash; Neutral</label>
+        <label><input type="radio" name="q12_trust_sci" value="5" data-key="q12_trust_sci"> 5</label>
+        <label><input type="radio" name="q12_trust_sci" value="6" data-key="q12_trust_sci"> 6</label>
+        <label><input type="radio" name="q12_trust_sci" value="7" data-key="q12_trust_sci"> 7 &mdash; Trust completely</label>
       </div>
-      <div class="scale-endpoints">
-        <span>1 &mdash; Do not trust at all</span>
-        <span>7 &mdash; Trust completely</span>
-      </div>
-      <div class="radio-group" data-name="q12_trust_sci" data-required="true"></div>
     </div>
 
     <div class="btn-row">
@@ -326,7 +311,7 @@
     <!-- Q13 Budget knowledge (5-point) -->
     <div class="q-block">
       <span class="q-label">Q13. How knowledgeable do you feel about how the UK government spends public money?</span>
-      <div class="radio-group" data-name="q13_budgknow" data-required="false">
+      <div class="radio-group" data-name="q13_budgknow" data-required="true">
         <label><input type="radio" name="q13_budgknow" value="not_at_all" data-key="q13_budgknow"> Not at all knowledgeable</label>
         <label><input type="radio" name="q13_budgknow" value="not_very"   data-key="q13_budgknow"> Not very knowledgeable</label>
         <label><input type="radio" name="q13_budgknow" value="somewhat"   data-key="q13_budgknow"> Somewhat knowledgeable</label>
@@ -339,7 +324,7 @@
     <div class="q-block">
       <span class="q-label">Q14. Please indicate how much you agree or disagree with the following statement:</span>
       <span class="q-sub">&ldquo;I tend to be sceptical of claims I see in the news or on social media.&rdquo;</span>
-      <div class="radio-group" data-name="q14_sceptic" data-required="false">
+      <div class="radio-group" data-name="q14_sceptic" data-required="true">
         <label><input type="radio" name="q14_sceptic" value="strongly_disagree" data-key="q14_sceptic"> Strongly disagree</label>
         <label><input type="radio" name="q14_sceptic" value="disagree"          data-key="q14_sceptic"> Disagree</label>
         <label><input type="radio" name="q14_sceptic" value="neither"           data-key="q14_sceptic"> Neither agree nor disagree</label>
@@ -377,7 +362,7 @@
     <!-- Q16 Children under 18 -->
     <div class="q-block">
       <span class="q-label">Q16. Do you have any children under the age of 18 currently living in your household?</span>
-      <div class="radio-group" data-name="q16_children" data-required="false">
+      <div class="radio-group" data-name="q16_children" data-required="true">
         <label><input type="radio" name="q16_children" value="yes"  data-key="q16_children"> Yes</label>
         <label><input type="radio" name="q16_children" value="no"   data-key="q16_children"> No</label>
         <label><input type="radio" name="q16_children" value="pnts" data-key="q16_children"> Prefer not to say</label>

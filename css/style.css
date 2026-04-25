@@ -346,32 +346,6 @@ input[type="number"].input-error { border-color: var(--red); }
   outline-offset: 2px;
 }
 
-/* ---- Trust scale (1-7 Likert, labelled ends) ---- */
-.trust-scale { }
-
-.trust-scale .likert-row .likert-btn > span { min-height: 52px; font-size: 12px; }
-.trust-scale .likert-btn { min-width: 0; }
-
-/* ---- LR political scale (0-10, wider) ---- */
-.lr-scale .likert-row {
-  gap: 4px;
-}
-
-.lr-scale .likert-btn > span {
-  min-height: 48px;
-  font-size: 11px;
-  padding: 8px 4px;
-}
-.lr-scale .likert-btn { min-width: 0; }
-
-
-.scale-endpoints {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  color: var(--grey-600);
-  margin-top: 6px;
-}
 
 /* ---- Range slider (sharing intentions 0-100) ---- */
 .range-wrap {
@@ -614,11 +588,4 @@ input[type="range"] {
     min-height: 56px;
   }
 
-  /* LR scale (0–10): wrap into 2 rows (6+5) for adequate touch targets */
-  .lr-scale .likert-row {
-    flex-wrap: wrap;
-  }
-  .lr-scale .likert-btn {
-    flex: 0 0 calc((100% - 5 * 4px) / 6);
-  }
 }
