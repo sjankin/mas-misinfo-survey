@@ -263,9 +263,10 @@ function validateSection(secId) {
   const sec = document.getElementById(secId);
   if (!sec) return true;
 
-  // Clear old error messages
+  // Clear old error messages and highlights
   sec.querySelectorAll('.error-msg').forEach(e => e.remove());
   sec.querySelectorAll('.input-error').forEach(e => e.classList.remove('input-error'));
+  sec.querySelectorAll('.has-error').forEach(e => e.classList.remove('has-error'));
 
   let valid = true;
 
@@ -329,6 +330,8 @@ function appendError(parent, msg) {
   p.className = 'error-msg';
   p.textContent = msg;
   parent.appendChild(p);
+  const qBlock = parent.closest('.q-block');
+  if (qBlock) qBlock.classList.add('has-error');
 }
 
 // ============================================================
