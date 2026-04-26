@@ -106,9 +106,10 @@ async function init() {
   state.responses.screen_width = screen.width;
 
   // Cell assignment via SHA-256
-  state.cell      = await assignCell(state.pid);
-  state.condition = state.cell < 6 ? 'T' : 'C';
-  state.claimOrder = ORDERS[state.cell % 6];
+  const cellIdx    = await assignCell(state.pid);  // numeric index 0–11
+  state.condition  = cellIdx < 6 ? 'T' : 'C';
+  state.claimOrder = ORDERS[cellIdx % 6];
+  state.cell       = state.condition + '_' + state.claimOrder;  // e.g. "T_ABC"
   state.claimsSeq  = state.claimOrder.split('');
 
   // Backup to localStorage immediately
