@@ -7,7 +7,7 @@ const SURVEY_CONFIG = {
   SALT:           '3d7fa8b2e4c961f05a3d7b8e2c9f4a1d',
   SECRET:         'Xm9Kp4nL7qR2wT5s',
   ENDPOINT:       'https://script.google.com/macros/s/AKfycbzAck9icLtNvRyMI6XoS8BzTHMF_aP1r9dWE7-rI_cg2wjoNNw2HOAljuqDGP5xEUBLoA/exec',
-  COMPLETION_URL: 'https://app.prolific.com/submissions/complete?cc=FCZG2NYU',  // PILOT3 (main study: D6LFYZJ0)
+  COMPLETION_URL: 'https://app.prolific.com/submissions/complete?cc=D6LFYZJ0',  // MAIN STUDY (Causality ws, study 69ee022ea22486d596556fb9)
   STUDY_ID:       'MAS-MISINFO-2026-CONF'
 };
 
